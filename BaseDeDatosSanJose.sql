@@ -43,11 +43,11 @@ CREATE TABLE Usuario (
 
 
 
--- PRODUCTOS LÁCTEOS
+-- PRODUCTOS LACTEOS
 INSERT INTO ProductoLacteo (tipo_producto, fecha_produccion, lote, conservantes)
 VALUES
 ('Queso', '2025-05-01', 'L001', 'Sal'),
-('Yogurt', '2025-05-02', 'L002', 'Ácido láctico'),
+('Yogurt', '2025-05-02', 'L002', 'Acido lactico'),
 ('Mantequilla', '2025-05-03', 'L003', 'Ninguno'),
 ('Queso', '2025-05-04', 'L004', 'Ninguno'),
 ('Yogurt', '2025-05-05', 'L005', 'Estabilizante'),
@@ -134,18 +134,18 @@ VALUES
 ('Mantequilla', '2025-07-23', 'L084', 'Sal'),
 ('Manjar', '2025-07-24', 'L085', 'Azúcar'),
 ('Natilla', '2025-07-25', 'L086', 'Canela'),
-('Queso con orégano', '2025-07-26', 'L087', 'Orégano'),
+('Queso con oregano', '2025-07-26', 'L087', 'Oregano'),
 ('Queso', '2025-07-27', 'L088', 'Sal'),
 ('Yogurt', '2025-07-28', 'L089', 'Ácido láctico'),
 ('Mantequilla', '2025-07-29', 'L090', 'Sal'),
-('Manjar', '2025-07-30', 'L091', 'Ácido cítrico'),
+('Manjar', '2025-07-30', 'L091', 'Acido cítrico'),
 ('Natilla', '2025-07-31', 'L092', 'Canela'),
-('Queso con orégano', '2025-08-01', 'L093', 'Orégano'),
+('Queso con oregano', '2025-08-01', 'L093', 'Oregano'),
 ('Yogurt', '2025-08-02', 'L094', 'Estabilizante'),
 ('Mantequilla', '2025-08-03', 'L095', 'Sal'),
 ('Queso', '2025-08-04', 'L096', 'Cloruro de calcio'),
-('Yogurt', '2025-08-05', 'L097', 'Ácido láctico'),
-('Manjar', '2025-08-06', 'L098', 'Azúcar');
+('Yogurt', '2025-08-05', 'L097', 'Acido lactico'),
+('Manjar', '2025-08-06', 'L098', 'Azucar');
 
 SELECT * FROM ProductoLacteo;
 
