@@ -295,6 +295,16 @@ VALUES
 (28, 14, '2025-05-28', 'RegresionLineal'),
 (29, 25, '2025-05-29', 'RegresionLineal'),
 (30, 16, '2025-05-30', 'RegresionLineal'),
+(31, 23, '2025-05-31', 'RegresionLineal'),
+(32, 10, '2025-06-01', 'RegresionLineal'),
+(33, 30, '2025-06-02', 'RegresionLineal'),
+(34, 19, '2025-06-03', 'RegresionLineal'),
+(35, 12, '2025-06-04', 'RegresionLineal'),
+(36, 27, '2025-06-05', 'RegresionLineal'),
+(37, 21, '2025-06-06', 'RegresionLineal'),
+(38, 14, '2025-06-07', 'RegresionLineal'),
+(39, 26, '2025-06-08', 'RegresionLineal'),
+(40, 17, '2025-06-09', 'RegresionLineal'),
 
 
 
