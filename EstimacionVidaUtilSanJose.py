@@ -5,11 +5,15 @@ import datetime
 
 # Datos simulados (puedes ampliarlos con más registros reales de la empresa)
 data = pd.DataFrame({
-    'tipo_producto': ['Queso', 'Yogurt', 'Mantequilla', 'Queso', 'Yogurt'],
-    'temperatura': [10, 4, 6, 14, 8],
-    'humedad': [70, 60, 50, 75, 65],
-    'ph': [6.2, 4.5, 5.2, 6.0, 4.8],
-    'vida_util_dias': [20, 15, 30, 18, 12]
+    'tipo_producto': [
+        'Queso', 'Yogurt', 'Mantequilla',
+        'Queso', 'Yogurt',
+        'Manjar', 'Natilla', 'Queso con orégano'
+    ],
+    'temperatura': [10, 4, 6, 14, 8, 12, 9, 11],
+    'humedad':     [70, 60, 50, 75, 65, 68, 66, 69],
+    'ph':          [6.2, 4.5, 5.2, 6.0, 4.8, 5.9, 5.7, 6.3],
+    'vida_util_dias': [20, 15, 30, 18, 12, 22, 16, 24]
 })
 
 # Convertir tipo_producto a variables numéricas
