@@ -274,9 +274,21 @@ VALUES
 (7, 22, '2025-05-07', 'RegresionLineal'),
 (8, 15, '2025-05-08', 'RegresionLineal'),
 (9, 27, '2025-05-09', 'RegresionLineal'),
-(10, 17, '2025-05-10', 'RegresionLineal');
+(10, 17, '2025-05-10', 'RegresionLineal'),
+(11, 24, '2025-05-11', 'RegresionLineal'),
+(12, 12, '2025-05-12', 'RegresionLineal'),
+(13, 30, '2025-05-13', 'RegresionLineal'),
+(14, 19, '2025-05-14', 'RegresionLineal'),
+(15, 13, '2025-05-15', 'RegresionLineal'),
+(16, 28, '2025-05-16', 'RegresionLineal'),
+(17, 23, '2025-05-17', 'RegresionLineal'),
+(18, 16, '2025-05-18', 'RegresionLineal'),
+(19, 26, '2025-05-19', 'RegresionLineal'),
+(20, 18, '2025-05-20', 'RegresionLineal');
 
 
+
+SELECT * FROM EstimacionVidaUtil;
 
 -- CONDICIONES y ESTIMACIONES para productos del 11 al 30
 DECLARE @i INT = 11;
@@ -301,7 +313,7 @@ END;
 
 
 
-SELECT * FROM EstimacionVidaUtil;
+
 
 
 
