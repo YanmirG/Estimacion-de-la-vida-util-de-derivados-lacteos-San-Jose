@@ -371,7 +371,7 @@ VALUES
 
 SELECT * FROM EstimacionVidaUtil;
 
--- CONDICIONES y ESTIMACIONES para productos del 11 al 30
+-- CONDICIONES y ESTIMACIONES para productos del 101 al 120
 DECLARE @i INT = 101;
 WHILE @i <= 120
 BEGIN
