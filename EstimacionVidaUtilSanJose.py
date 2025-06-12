@@ -3,7 +3,9 @@ from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 import datetime
 
-# Datos simulados (puedes ampliarlos con más registros reales de la empresa)
+# ---------------------------------------------------
+# 1) Datos simulados ampliados de la empresa Lácteos San José
+# ---------------------------------------------------
 data = pd.DataFrame({
     'tipo_producto': [
         'Queso', 'Yogurt', 'Mantequilla',
