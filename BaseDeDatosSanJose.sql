@@ -259,6 +259,9 @@ VALUES
 (98, 4.9, 59.4, 4.6, '2025-08-06'),
 (99, 6.7, 55.2, 5.0, '2025-08-07'),
 (100, 13.5, 74.0, 6.0, '2025-08-08');
+
+SELECT * FROM CondicionAmbiental;
+
 -- ESTIMACIONES (vida útil según condiciones)
 INSERT INTO EstimacionVidaUtil (id_producto, vida_util_dias, fecha_estimacion, metodo_modelo)
 VALUES
@@ -273,29 +276,7 @@ VALUES
 (9, 27, '2025-05-09', 'RegresionLineal'),
 (10, 17, '2025-05-10', 'RegresionLineal');
 
--- REPETIMOS CON MÁS VARIEDAD (productos 11 a 30)
-INSERT INTO ProductoLacteo (tipo_producto, fecha_produccion, lote, conservantes)
-VALUES
-('Queso', '2025-05-11', 'L011', 'Sal'),
-('Yogurt', '2025-05-12', 'L012', 'Ácido láctico'),
-('Mantequilla', '2025-05-13', 'L013', 'Sal'),
-('Queso', '2025-05-14', 'L014', 'Ninguno'),
-('Yogurt', '2025-05-15', 'L015', 'Estabilizante'),
-('Mantequilla', '2025-05-16', 'L016', 'Ninguno'),
-('Queso', '2025-05-17', 'L017', 'Cloruro de calcio'),
-('Yogurt', '2025-05-18', 'L018', 'Ninguno'),
-('Mantequilla', '2025-05-19', 'L019', 'Ácido sórbico'),
-('Queso', '2025-05-20', 'L020', 'Ninguno'),
-('Queso', '2025-05-21', 'L021', 'Sal'),
-('Yogurt', '2025-05-22', 'L022', 'Ácido láctico'),
-('Mantequilla', '2025-05-23', 'L023', 'Sal'),
-('Queso', '2025-05-24', 'L024', 'Ninguno'),
-('Yogurt', '2025-05-25', 'L025', 'Estabilizante'),
-('Mantequilla', '2025-05-26', 'L026', 'Ninguno'),
-('Queso', '2025-05-27', 'L027', 'Cloruro de calcio'),
-('Yogurt', '2025-05-28', 'L028', 'Ninguno'),
-('Mantequilla', '2025-05-29', 'L029', 'Ácido sórbico'),
-('Queso', '2025-05-30', 'L030', 'Ninguno');
+
 
 -- CONDICIONES y ESTIMACIONES para productos del 11 al 30
 DECLARE @i INT = 11;
@@ -319,7 +300,7 @@ END;
 
 
 
-SELECT * FROM CondicionAmbiental;
+
 SELECT * FROM EstimacionVidaUtil;
 
 
