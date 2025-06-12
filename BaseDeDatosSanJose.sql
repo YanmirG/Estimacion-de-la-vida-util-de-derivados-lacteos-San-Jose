@@ -358,7 +358,16 @@ VALUES
 (88, 19, '2025-07-27', 'RegresionLineal'),
 (89, 21, '2025-07-28', 'RegresionLineal'),
 (90, 17, '2025-07-29', 'RegresionLineal'),
-
+(91, 26, '2025-07-30', 'RegresionLineal'),
+(92, 12, '2025-07-31', 'RegresionLineal'),
+(93, 30, '2025-08-01', 'RegresionLineal'),
+(94, 20, '2025-08-02', 'RegresionLineal'),
+(95, 15, '2025-08-03', 'RegresionLineal'),
+(96, 28, '2025-08-04', 'RegresionLineal'),
+(97, 14, '2025-08-05', 'RegresionLineal'),
+(98, 22, '2025-08-06', 'RegresionLineal'),
+(99, 16, '2025-08-07', 'RegresionLineal'),
+(100, 19, '2025-08-08', 'RegresionLineal');
 
 
 SELECT * FROM EstimacionVidaUtil;
