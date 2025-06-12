@@ -284,7 +284,17 @@ VALUES
 (17, 23, '2025-05-17', 'RegresionLineal'),
 (18, 16, '2025-05-18', 'RegresionLineal'),
 (19, 26, '2025-05-19', 'RegresionLineal'),
-(20, 18, '2025-05-20', 'RegresionLineal');
+(20, 18, '2025-05-20', 'RegresionLineal'),
+(21, 22, '2025-05-21', 'RegresionLineal'),
+(22, 11, '2025-05-22', 'RegresionLineal'),
+(23, 29, '2025-05-23', 'RegresionLineal'),
+(24, 17, '2025-05-24', 'RegresionLineal'),
+(25, 15, '2025-05-25', 'RegresionLineal'),
+(26, 31, '2025-05-26', 'RegresionLineal'),
+(27, 20, '2025-05-27', 'RegresionLineal'),
+(28, 14, '2025-05-28', 'RegresionLineal'),
+(29, 25, '2025-05-29', 'RegresionLineal'),
+(30, 16, '2025-05-30', 'RegresionLineal'),
 
 
 
