@@ -18,7 +18,10 @@ data = pd.DataFrame({
     'vida_util_dias': [20, 15, 30, 18, 12, 22, 16, 24]
 })
 
-# Convertir tipo_producto a variables numéricas
+# ---------------------------------------------------
+# 2) Convertir tipo_producto a variables numéricas
+#    drop_first=False para incluir todas las categorías
+# ---------------------------------------------------
 data = pd.get_dummies(data, columns=['tipo_producto'], drop_first=True)
 
 # Separar variables de entrada (X) y salida (y)
