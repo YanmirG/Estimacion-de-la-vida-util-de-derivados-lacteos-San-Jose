@@ -372,24 +372,29 @@ VALUES
 SELECT * FROM EstimacionVidaUtil;
 
 -- CONDICIONES y ESTIMACIONES para productos del 11 al 30
-DECLARE @i INT = 11;
-WHILE @i <= 30
+DECLARE @i INT = 101;
+WHILE @i <= 120
 BEGIN
     INSERT INTO CondicionAmbiental (id_producto, temperatura, humedad, ph, fecha_registro)
-    VALUES (@i, 
-           ROUND(RAND() * 10 + 4, 1),  -- temp entre 4 y 14
-           ROUND(RAND() * 25 + 50, 1), -- humedad entre 50 y 75
-           ROUND(RAND() * 2 + 4, 1),   -- pH entre 4.0 y 6.0
-           DATEADD(DAY, @i, '2025-05-01'));
+    VALUES (
+        @i,
+        ROUND(RAND() * 10 + 4, 1),   -- temp entre 4 y 14
+        ROUND(RAND() * 25 + 50, 1),  -- humedad entre 50 y 75
+        ROUND(RAND() * 2 + 4, 1),    -- pH entre 4.0 y 6.0
+        DATEADD(DAY, @i - 1, '2025-05-01')
+    );
 
     INSERT INTO EstimacionVidaUtil (id_producto, vida_util_dias, fecha_estimacion, metodo_modelo)
-    VALUES (@i, 
-            ROUND(RAND() * 20 + 10, 0), 
-            DATEADD(DAY, @i, '2025-05-01'), 
-            'RegresionLineal');
+    VALUES (
+        @i,
+        ROUND(RAND() * 20 + 10, 0), 
+        DATEADD(DAY, @i - 1, '2025-05-01'),
+        'RegresionLineal'
+    );
 
     SET @i = @i + 1;
 END;
+
 
 
 
