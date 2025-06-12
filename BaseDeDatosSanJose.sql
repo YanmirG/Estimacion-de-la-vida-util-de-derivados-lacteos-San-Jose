@@ -347,7 +347,6 @@ VALUES
 (78, 16, '2025-07-17', 'RegresionLineal'),
 (79, 25, '2025-07-18', 'RegresionLineal'),
 (80, 18, '2025-07-19', 'RegresionLineal'),
-
 (81, 23, '2025-07-20', 'RegresionLineal'),
 (82, 11, '2025-07-21', 'RegresionLineal'),
 (83, 29, '2025-07-22', 'RegresionLineal'),
