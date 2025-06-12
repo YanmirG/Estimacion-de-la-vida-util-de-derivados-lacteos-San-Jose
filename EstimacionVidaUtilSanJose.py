@@ -24,7 +24,9 @@ data = pd.DataFrame({
 # ---------------------------------------------------
 data = pd.get_dummies(data, columns=['tipo_producto'], drop_first=True)
 
-# Separar variables de entrada (X) y salida (y)
+# ---------------------------------------------------
+# 3) Separar variables de entrada (X) y salida (y)
+# ---------------------------------------------------
 X = data.drop(columns=['vida_util_dias'])
 y = data['vida_util_dias']
 
