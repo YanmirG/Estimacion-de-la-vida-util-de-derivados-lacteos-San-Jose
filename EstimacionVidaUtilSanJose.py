@@ -3,9 +3,9 @@ from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 import datetime
 
-# -------------------------------------------------
+# -------------------------------------------------------------
 # 1) Datos simulados ampliados de la empresa Lácteos San José
-# -------------------------------------------------
+# -------------------------------------------------------------
 data = pd.DataFrame({
     'tipo_producto': [
         'Queso', 'Yogurt', 'Mantequilla',
@@ -18,10 +18,10 @@ data = pd.DataFrame({
     'vida_util_dias': [20, 15, 30, 18, 12, 22, 16, 24]
 })
 
-# ---------------------------------------------------
+# ------------------------------------------------------
 # 2) Convertir tipo_producto a variables numéricas
 #    drop_first=False para incluir todas las categorías
-# ---------------------------------------------------
+# -------------------------------------------------------
 data = pd.get_dummies(data, columns=['tipo_producto'], drop_first=False)
 # Esto crea columnas como tipo_producto_Yogurt, tipo_producto_Mantequilla, etc.
 
