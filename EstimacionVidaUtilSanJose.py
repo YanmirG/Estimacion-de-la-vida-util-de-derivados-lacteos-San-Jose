@@ -38,9 +38,9 @@ y = data['vida_util_dias']
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# ---------------------------------------------------
+# ----------------------------------------------------
 # 5) Entrenar el modelo de regresión
-# --------------------------------------------------
+# ----------------------------------------------------
 modelo = LinearRegression()
 modelo.fit(X_train, y_train)
 
@@ -81,9 +81,9 @@ def estimar_vida_util(tipo, fecha_str, temperatura, humedad, ph):
         'dias_restantes': dias_restantes
     }
 
-# ---------------------------------------------------
+# -----------------------------------------
 # 7) Uso por consola
-# ---------------------------------------------------
+# -----------------------------------------
 if __name__ == "__main__":
     print("=== Estimación de vida útil – Lácteos San José ===")
     tipo = input(
