@@ -43,18 +43,18 @@ CREATE TABLE Usuario (
 
 
 
--- PRODUCTOS LÁCTEOS
+-- PRODUCTOS Lï¿½CTEOS
 INSERT INTO ProductoLacteo (tipo_producto, fecha_produccion, lote, conservantes)
 VALUES
 ('Queso', '2025-05-01', 'L001', 'Sal'),
-('Yogurt', '2025-05-02', 'L002', 'Ácido láctico'),
+('Yogurt', '2025-05-02', 'L002', 'ï¿½cido lï¿½ctico'),
 ('Mantequilla', '2025-05-03', 'L003', 'Ninguno'),
 ('Queso', '2025-05-04', 'L004', 'Ninguno'),
 ('Yogurt', '2025-05-05', 'L005', 'Estabilizante'),
 ('Mantequilla', '2025-05-06', 'L006', 'Sal'),
 ('Queso', '2025-05-07', 'L007', 'Cloruro de calcio'),
 ('Yogurt', '2025-05-08', 'L008', 'Ninguno'),
-('Mantequilla', '2025-05-09', 'L009', 'Ácido sórbico'),
+('Mantequilla', '2025-05-09', 'L009', 'ï¿½cido sï¿½rbico'),
 ('Queso', '2025-05-10', 'L010', 'Ninguno');
 
 -- CONDICIONES AMBIENTALES (producto_id del 1 al 10)
@@ -71,7 +71,7 @@ VALUES
 (9, 6.5, 55.0, 5.0, '2025-05-09'),
 (10, 13.0, 74.0, 6.0, '2025-05-10');
 
--- ESTIMACIONES (vida útil según condiciones)
+-- ESTIMACIONES (vida ï¿½til segï¿½n condiciones)
 INSERT INTO EstimacionVidaUtil (id_producto, vida_util_dias, fecha_estimacion, metodo_modelo)
 VALUES
 (1, 21, '2025-05-01', 'RegresionLineal'),
@@ -85,28 +85,28 @@ VALUES
 (9, 27, '2025-05-09', 'RegresionLineal'),
 (10, 17, '2025-05-10', 'RegresionLineal');
 
--- REPETIMOS CON MÁS VARIEDAD (productos 11 a 30)
+-- REPETIMOS CON Mï¿½S VARIEDAD (productos 11 a 30)
 INSERT INTO ProductoLacteo (tipo_producto, fecha_produccion, lote, conservantes)
 VALUES
 ('Queso', '2025-05-11', 'L011', 'Sal'),
-('Yogurt', '2025-05-12', 'L012', 'Ácido láctico'),
+('Yogurt', '2025-05-12', 'L012', 'ï¿½cido lï¿½ctico'),
 ('Mantequilla', '2025-05-13', 'L013', 'Sal'),
 ('Queso', '2025-05-14', 'L014', 'Ninguno'),
 ('Yogurt', '2025-05-15', 'L015', 'Estabilizante'),
 ('Mantequilla', '2025-05-16', 'L016', 'Ninguno'),
 ('Queso', '2025-05-17', 'L017', 'Cloruro de calcio'),
 ('Yogurt', '2025-05-18', 'L018', 'Ninguno'),
-('Mantequilla', '2025-05-19', 'L019', 'Ácido sórbico'),
+('Mantequilla', '2025-05-19', 'L019', 'ï¿½cido sï¿½rbico'),
 ('Queso', '2025-05-20', 'L020', 'Ninguno'),
 ('Queso', '2025-05-21', 'L021', 'Sal'),
-('Yogurt', '2025-05-22', 'L022', 'Ácido láctico'),
+('Yogurt', '2025-05-22', 'L022', 'ï¿½cido lï¿½ctico'),
 ('Mantequilla', '2025-05-23', 'L023', 'Sal'),
 ('Queso', '2025-05-24', 'L024', 'Ninguno'),
 ('Yogurt', '2025-05-25', 'L025', 'Estabilizante'),
 ('Mantequilla', '2025-05-26', 'L026', 'Ninguno'),
 ('Queso', '2025-05-27', 'L027', 'Cloruro de calcio'),
 ('Yogurt', '2025-05-28', 'L028', 'Ninguno'),
-('Mantequilla', '2025-05-29', 'L029', 'Ácido sórbico'),
+('Mantequilla', '2025-05-29', 'L029', 'ï¿½cido sï¿½rbico'),
 ('Queso', '2025-05-30', 'L030', 'Ninguno');
 
 -- CONDICIONES y ESTIMACIONES para productos del 11 al 30
