@@ -1,3 +1,4 @@
+
 CREATE DATABASE SistemaLacteosSanJose;
 GO
 
@@ -5,7 +6,7 @@ USE SistemaLacteosSanJose;
 GO
 
 CREATE TABLE ProductoLacteo (
-    id_producto INT PRIM('Mantequilla', '2025-05-09', 'L009', 'Ácido sórbico'),ARY KEY IDENTITY(1,1),
+    id_producto INT PRIMARY KEY IDENTITY(1,1),
     tipo_producto VARCHAR(50) NOT NULL,
     fecha_produccion DATE NOT NULL,
     lote VARCHAR(30),
@@ -151,7 +152,7 @@ VALUES
 SELECT * FROM ProductoLacteo;
 
 
--- CONDICIONES AMBIENTALES (producto_id del 1 al 10)
+-- CONDICIONES AMBIENTALES 
 INSERT INTO CondicionAmbiental (id_producto, temperatura, humedad, ph, fecha_registro)
 VALUES
 (1, 10.5, 72.0, 6.3, '2025-05-01'),
@@ -174,7 +175,6 @@ VALUES
 (18, 4.3, 59.0, 4.6, '2025-05-18'),
 (19, 6.7, 55.5, 5.1, '2025-05-19'),
 (20, 12.8, 73.5, 5.9, '2025-05-20'),
-
 (21, 10.7, 72.2, 6.3, '2025-05-21'),
 (22, 4.4, 60.8, 4.6, '2025-05-22'),
 (23, 6.0, 51.9, 5.2, '2025-05-23'),
@@ -185,7 +185,6 @@ VALUES
 (28, 4.2, 58.3, 4.3, '2025-05-28'),
 (29, 6.6, 54.8, 5.0, '2025-05-29'),
 (30, 13.1, 74.1, 6.1, '2025-05-30'),
-
 (31, 10.6, 70.1, 6.2, '2025-05-31'),
 (32, 4.0, 60.0, 4.5, '2025-06-01'),
 (33, 6.2, 52.5, 5.4, '2025-06-02'),
@@ -196,7 +195,6 @@ VALUES
 (38, 4.5, 57.9, 4.4, '2025-06-07'),
 (39, 6.8, 55.7, 5.0, '2025-06-08'),
 (40, 12.9, 73.7, 6.0, '2025-06-09'),
-
 (41, 10.2, 71.3, 6.3, '2025-06-10'),
 (42, 4.6, 61.2, 4.6, '2025-06-11'),
 (43, 6.4, 53.3, 5.5, '2025-06-12'),
@@ -227,7 +225,6 @@ VALUES
 (68, 4.2, 59.3, 4.3, '2025-07-07'),
 (69, 6.5, 55.8, 5.0, '2025-07-08'),
 (70, 13.0, 74.2, 6.0, '2025-07-09'),
-
 (71, 10.9, 72.1, 6.4, '2025-07-10'),
 (72, 4.1, 60.6, 4.5, '2025-07-11'),
 (73, 6.3, 52.6, 5.2, '2025-07-12'),
@@ -238,7 +235,6 @@ VALUES
 (78, 4.0, 57.5, 4.6, '2025-07-17'),
 (79, 6.9, 56.3, 5.1, '2025-07-18'),
 (80, 13.4, 74.8, 6.2, '2025-07-19'),
-
 (81, 10.1, 71.2, 6.3, '2025-07-20'),
 (82, 4.6, 60.3, 4.4, '2025-07-21'),
 (83, 6.4, 53.7, 5.4, '2025-07-22'),
@@ -249,7 +245,6 @@ VALUES
 (88, 4.8, 58.7, 4.5, '2025-07-27'),
 (89, 6.6, 55.4, 5.0, '2025-07-28'),
 (90, 13.1, 73.4, 6.1, '2025-07-29'),
-
 (91, 10.5, 72.6, 6.3, '2025-07-30'),
 (92, 4.4, 60.1, 4.5, '2025-07-31'),
 (93, 6.2, 51.6, 5.2, '2025-08-01'),
@@ -263,7 +258,7 @@ VALUES
 
 SELECT * FROM CondicionAmbiental;
 
--- ESTIMACIONES (vida �til seg�n condiciones)
+-- ESTIMACIONES 
 INSERT INTO EstimacionVidaUtil (id_producto, vida_util_dias, fecha_estimacion, metodo_modelo)
 VALUES
 (1, 21, '2025-05-01', 'RegresionLineal'),
@@ -326,7 +321,6 @@ VALUES
 (58, 17, '2025-06-27', 'RegresionLineal'),
 (59, 21, '2025-06-28', 'RegresionLineal'),
 (60, 14, '2025-06-29', 'RegresionLineal'),
-
 (61, 24, '2025-06-30', 'RegresionLineal'),
 (62, 12, '2025-07-01', 'RegresionLineal'),
 (63, 29, '2025-07-02', 'RegresionLineal'),
@@ -337,7 +331,6 @@ VALUES
 (68, 15, '2025-07-07', 'RegresionLineal'),
 (69, 26, '2025-07-08', 'RegresionLineal'),
 (70, 19, '2025-07-09', 'RegresionLineal'),
-
 (71, 20, '2025-07-10', 'RegresionLineal'),
 (72, 12, '2025-07-11', 'RegresionLineal'),
 (73, 30, '2025-07-12', 'RegresionLineal'),
