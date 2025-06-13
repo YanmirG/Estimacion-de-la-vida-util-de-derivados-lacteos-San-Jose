@@ -4,9 +4,9 @@ from sklearn.model_selection import train_test_split
 import datetime
 
 
-# -------------------------------------------------------------
+
 # 1) Datos simulados ampliados de la empresa Lácteos San José
-# -------------------------------------------------------------
+
 data = pd.DataFrame({
     'tipo_producto': [
         'Queso', 'Yogurt', 'Mantequilla',
@@ -20,41 +20,41 @@ data = pd.DataFrame({
 })
 
 
-# -------------------------------------------------------
+
 # 2) Convertir tipo_producto a variables numéricas
-#    drop_first=False para incluir todas las categorías
-# -------------------------------------------------------
+
+
 data = pd.get_dummies(data, columns=['tipo_producto'], drop_first=False)
 # Esto crea columnas como tipo_producto_Yogurt, tipo_producto_Mantequilla, etc.
 
 
 
 
-# ---------------------------------------------------
+
 # 3) Separar variables de entrada (X) y salida (y)
-# ---------------------------------------------------
+
 X = data.drop(columns=['vida_util_dias'])
 y = data['vida_util_dias']
 
 
-# ---------------------------------------------------
+
 # 4) Dividir en entrenamiento y prueba
-# ---------------------------------------------------
+
 
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 
-# ----------------------------------------------------
+
 # 5) Entrenar el modelo de regresión
-# ----------------------------------------------------
+
 modelo = LinearRegression()
 modelo.fit(X_train, y_train)
 
 
-# ---------------------------------------------------
+
 # 6) Función para estimar vida útil dado un input
-# ---------------------------------------------------
+
 def estimar_vida_util(tipo, fecha_str, temperatura, humedad, ph):
     try:
         fecha_produccion = datetime.datetime.strptime(fecha_str, "%Y-%m-%d").date()
@@ -95,9 +95,9 @@ def estimar_vida_util(tipo, fecha_str, temperatura, humedad, ph):
     }
 
 
-# -----------------------------------------
+
 # 7) Uso por consola
-# -----------------------------------------
+
 if __name__ == "__main__":
     print("=== Estimación de vida útil – Lácteos San José ===")
     tipo = input(
@@ -119,3 +119,4 @@ if __name__ == "__main__":
         print(f"Días restantes para vencer: {resultado['dias_restantes']}")
     else:
         print("¡Atención! El producto ha superado su vida útil estimada.")
+
