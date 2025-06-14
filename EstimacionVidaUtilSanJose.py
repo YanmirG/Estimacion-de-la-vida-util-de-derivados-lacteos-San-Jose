@@ -19,7 +19,7 @@ data = pd.DataFrame({
     'vida_util_dias': [20, 15, 30, 18, 12, 22, 16, 24]
 })
 
-# Asegurarse de que los tipos de datos son correctos
+ 
 
 # 2) Convertir tipo_producto a variables numéricas
 
