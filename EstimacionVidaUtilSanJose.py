@@ -106,14 +106,24 @@ if __name__ == "__main__":
     tipo = input(
         "Tipo de producto (Queso/Yogurt/Mantequilla/Manjar/Natilla/Queso con orégano): "
     ).strip()
-    fecha_str = input("Fecha de producción (YYYY-MM-DD): ").strip()
+    
+    # Solicitar la fecha en formato DD-MM-YYYY
+    fecha_str = input("Fecha de producción (DD-MM-YYYY): ").strip()
+    
+    # Convertir a formato YYYY-MM-DD si es necesario
+    from datetime import datetime
+    try:
+        fecha_obj = datetime.strptime(fecha_str, "%d-%m-%Y")
+        fecha_str = fecha_obj.strftime("%Y-%m-%d")
+    except ValueError:
+        print("Formato de fecha incorrecto. Usa DD-MM-YYYY.")
+        exit(1)
+    
     temperatura = float(input("Temperatura (°C): ").strip())
     humedad = float(input("Humedad (%): ").strip())
     ph = float(input("pH: ").strip())
 
-
     resultado = estimar_vida_util(tipo, fecha_str, temperatura, humedad, ph)
-
 
     print(f"\nPredicción de vida útil para {tipo}: {resultado['vida_util_dias']} días")
     print(f"Fecha de producción: {resultado['fecha_produccion']}")
