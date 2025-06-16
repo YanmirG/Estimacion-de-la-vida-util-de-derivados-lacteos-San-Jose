@@ -2,6 +2,7 @@ import pandas as pd
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 import datetime
+from datetime import datetime, timedelta
 
 
 
@@ -56,11 +57,12 @@ modelo.fit(X_train, y_train)
 # 6) Función para estimar vida útil dado un input
 
 def estimar_vida_util(tipo, fecha_str, temperatura, humedad, ph):
+    # Convertir la fecha de DD-MM-YYYY a YYYY-MM-DD
     try:
-        fecha_produccion = datetime.datetime.strptime(fecha_str, "%Y-%m-%d").date()
+        fecha_produccion = datetime.strptime(fecha_str, "%Y-%m-%d").date()
     except ValueError:
-        raise ValueError("Fecha inválida. Usa formato YYYY-MM-DD.")
-
+        # Si viene en DD-MM-YYYY, convertirlo
+        fecha_produccion = datetime.strptime(fecha_str, "%d-%m-%Y").date()
 
     # Preparar la muestra con todas las columnas de X
     muestra = {
@@ -71,21 +73,17 @@ def estimar_vida_util(tipo, fecha_str, temperatura, humedad, ph):
     # Añadir dummies para cada categoría
     for col in X.columns:
         if col.startswith('tipo_producto_'):
-            cat = col.replace('tipo_producto_', '')
-            muestra[col] = 1 if tipo == cat else 0
-
+            muestra[col] = (col == f'tipo_producto_{tipo}')
 
     muestra_df = pd.DataFrame([muestra])[X.columns]
-
 
     # Predicción
     vida_util = round(modelo.predict(muestra_df)[0])
 
-
     # Fechas
-    fecha_vencimiento = fecha_produccion + datetime.timedelta(days=vida_util)
-    dias_restantes = (fecha_vencimiento - datetime.date.today()).days
-
+    fecha_vencimiento = fecha_produccion + timedelta(days=vida_util)
+    hoy = datetime.now().date()
+    dias_restantes = (fecha_vencimiento - hoy).days
 
     return {
         'vida_util_dias': vida_util,
@@ -111,7 +109,6 @@ if __name__ == "__main__":
     fecha_str = input("Fecha de producción (DD-MM-YYYY): ").strip()
     
     # Convertir a formato YYYY-MM-DD si es necesario
-    from datetime import datetime
     try:
         fecha_obj = datetime.strptime(fecha_str, "%d-%m-%Y")
         fecha_str = fecha_obj.strftime("%Y-%m-%d")
