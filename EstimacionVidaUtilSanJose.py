@@ -100,6 +100,9 @@ def estimar_vida_util(tipo, fecha_str, temperatura, humedad, ph):
 
 if __name__ == "__main__":
     print("=== Estimación de vida útil – Lácteos San José ===")
+    print("\nBase de datos completa de productos:\n")
+    print(data)  # Muestra todo el DataFrame
+    print(f"\nTotal de registros: {len(data)}\n")
     tipo = input(
         "Tipo de producto (Queso/Yogurt/Mantequilla/Manjar/Natilla/Queso con orégano): "
     ).strip()
