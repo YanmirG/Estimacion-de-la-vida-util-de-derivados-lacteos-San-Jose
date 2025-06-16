@@ -108,7 +108,7 @@ if __name__ == "__main__":
     # Solicitar la fecha en formato DD-MM-YYYY
     fecha_str = input("Fecha de producción (DD-MM-YYYY): ").strip()
     
-    # Convertir a formato YYYY-MM-DD si es necesario
+
     try:
         fecha_obj = datetime.strptime(fecha_str, "%d-%m-%Y")
         fecha_str = fecha_obj.strftime("%Y-%m-%d")
