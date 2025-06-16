@@ -1,6 +1,6 @@
 import tensorflow as tf
 print(tf.__version__)
-from tensorflow.keras.preprocessing import image_dataset_from_directory
+from tensorflow.keras.preprocessing import image_dataset_from_directory # type: ignore
 
 # Ruta a tu dataset
 ruta_dataset = r'C:\Users\PC 19\OneDrive\Documentos\Estimacion de vida util\Estimacion-de-la-vida-util-de-derivados-lacteos-San-Jose\dataset_lacteos'
