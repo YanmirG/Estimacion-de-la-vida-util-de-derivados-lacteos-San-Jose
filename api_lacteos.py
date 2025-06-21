@@ -39,8 +39,11 @@ def estimacion():
             data = request.args
 
         print("Datos recibidos:", data)
+        
+        # Validar campos obligatorios
 
-        # Validar campos obligatorios (sin id_producto)
+
+
         campos = ['temperatura', 'humedad', 'ph', 'fecha_produccion']
         for campo in campos:
             if campo not in data or data.get(campo) in [None, '']:
