@@ -40,8 +40,6 @@ def estimacion():
 
         print("Datos recibidos:", data)
         
-        # Validar campos obligatorios
-
 
 
         campos = ['temperatura', 'humedad', 'ph', 'fecha_produccion']
