@@ -42,6 +42,8 @@ def estimacion():
         
 
 
+
+
         campos = ['temperatura', 'humedad', 'ph', 'fecha_produccion']
         for campo in campos:
             if campo not in data or data.get(campo) in [None, '']:
