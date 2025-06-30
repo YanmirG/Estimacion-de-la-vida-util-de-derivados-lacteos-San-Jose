@@ -29,7 +29,8 @@ model = tf.keras.Sequential([
     tf.keras.layers.GlobalAveragePooling2D(),
     tf.keras.layers.Dense(1, activation='sigmoid')
 ])
-
+# Asegúrate de que el modelo esté compilado antes de entrenarlo
+## Esto es necesario para que el modelo sepa cómo optimizarse
 model.compile(optimizer='adam',
               loss='binary_crossentropy',
               metrics=['accuracy'])
