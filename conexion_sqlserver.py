@@ -20,9 +20,6 @@ try:
     df = pd.read_sql(consulta, conn)
     print("📦 Datos de ProductoLacteo (con fecha_produccion):\n", df, "\n")
 
-    # Puedes usar este dataframe `df` para entrenar o probar tu IA
-    # Aquí solo mostramos las demás tablas por control de desarrollo:
-
     tablas = {
         "CondicionAmbiental": "SELECT * FROM CondicionAmbiental",
         "EstimacionVidaUtil": "SELECT * FROM EstimacionVidaUtil",
