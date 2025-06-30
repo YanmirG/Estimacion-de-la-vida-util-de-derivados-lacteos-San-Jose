@@ -1,6 +1,9 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 import pyodbc
+from PIL import Image
+import numpy as np
+import tensorflow as tf
 
 app = Flask(__name__)
 CORS(app)  # Permitir acceso desde tu app Android
@@ -13,6 +16,15 @@ conn_str = (
     'Trusted_Connection=yes;'
     'Encrypt=no;'
 )
+
+# Cargar el modelo solo una vez al iniciar la API
+modelo = tf.keras.models.load_model('modelo_lacteos.h5')
+
+def preparar_imagen(imagen_pil):
+    imagen = imagen_pil.resize((224, 224))
+    imagen = np.array(imagen) / 255.0
+    imagen = np.expand_dims(imagen, axis=0)
+    return imagen
 
 @app.route('/productos', methods=['GET'])
 def obtener_productos():
@@ -62,6 +74,24 @@ def estimacion():
         })
     except Exception as e:
         return jsonify({"error": str(e)}), 400
+
+@app.route('/analizar_imagen', methods=['POST'])
+def analizar_imagen():
+    if 'imagen' not in request.files:
+        return jsonify({'error': 'No se envió ninguna imagen'}), 400
+    file = request.files['imagen']
+    try:
+        img = Image.open(file.stream).convert('RGB')
+        imagen_preparada = preparar_imagen(img)
+        prediccion = modelo.predict(imagen_preparada)
+        estado = 'MalEstado' if prediccion[0][0] > 0.5 else 'BuenEstado'
+        confianza = float(prediccion[0][0]) if estado == 'MalEstado' else 1 - float(prediccion[0][0])
+        return jsonify({
+            'estado': estado,
+            'confianza': round(confianza, 3)
+        })
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=5000, debug=True)
