@@ -7,7 +7,6 @@ print(tf.__version__)
 
 # 1) Ruta a tu dataset
 ruta_dataset = r'C:\Users\PC 19\OneDrive\Documentos\Estimacion de vida util\Estimacion-de-la-vida-util-de-derivados-lacteos-San-Jose\dataset_lacteos'
-
 # 2) Cargar todas las imágenes (BuenEstado / MalEstado)
 dataset = image_dataset_from_directory(
     ruta_dataset,
@@ -30,7 +29,8 @@ train_ds = train_ds.cache().prefetch(AUTOTUNE)
 val_ds   = val_ds.cache().prefetch(AUTOTUNE)
 
 # 5) Modelo con MobileNetV2 preentrenado
-base_model = MobileNetV2(input_shape=(224,224,3), include_top=False, weights='imagenet')
+base_model = MobileNetV2(input_shape=(224,224,3), include_top=False,
+                          weights='imagenet')
 base_model.trainable = False
 
 model = tf.keras.Sequential([
