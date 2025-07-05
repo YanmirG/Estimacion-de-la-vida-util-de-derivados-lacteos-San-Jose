@@ -40,10 +40,6 @@ CREATE TABLE Usuario (
 );
 
 
-
-
-
-
 -- PRODUCTOS LACTEOS
 INSERT INTO ProductoLacteo (tipo_producto, fecha_produccion, lote, conservantes)
 VALUES
