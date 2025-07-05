@@ -1,7 +1,7 @@
 import tensorflow as tf
-from tensorflow.keras.utils import image_dataset_from_directory
-from tensorflow.keras.applications import MobileNetV2
-from tensorflow.keras.layers import GlobalAveragePooling2D, Dense
+from tensorflow.keras.utils import image_dataset_from_directory # type: ignore
+from tensorflow.keras.applications import MobileNetV2 # type: ignore
+from tensorflow.keras.layers import GlobalAveragePooling2D, Dense # type: ignore
 
 print(tf.__version__)
 
